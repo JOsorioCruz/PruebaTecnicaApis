@@ -1,0 +1,14 @@
+{
+  "name": "entregaJairo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "TestApis.js",
+  "scripts": {
+    "test-report": "newman run CapaApis/ColeccionRun.json -d dataRandom.json -r html --reporter-html-export Newman_Report.html"
+  },
+  "private": true,
+  "dependencies": {
+    "axios": "^1.7.7",
+    "newman-reporter-html": "^1.0.5"
+  }
+}

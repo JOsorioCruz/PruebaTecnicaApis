@@ -1,0 +1,6 @@
+# Ignorar la carpeta node_modules
+node_modules/
+
+# Ignorar otros archivos y carpetas comunes en proyectos de Node.js
+package-lock.json
+
