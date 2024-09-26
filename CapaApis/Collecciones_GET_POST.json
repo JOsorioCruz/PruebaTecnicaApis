@@ -1,0 +1,149 @@
+{
+  "info": {
+    "name": "Pruebas API - Colecciones",
+    "_postman_id": "unique-id-colecciones",
+    "description": "Colecciones para pruebas API GET y POST",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Pruebas API - GET",
+      "item": [
+        {
+          "name": "Primera Prueba - GET Posts",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "// Obtener la respuesta en formato JSON",
+                  "var jsonData = pm.response.json();",
+                  "",
+                  "// Títulos y cuerpos a validar",
+                  "var validations = [",
+                  "    {",
+                  "        \"title\": \"dolorum ut in voluptas mollitia et saepe quo animi\",",
+                  "        \"body\": \"aut dicta possimus sint mollitia voluptas commodi quo doloremque\\niste corrupti reiciendis voluptatem eius rerum\\nsit cumque quod eligendi laborum minima\\nperferendis recusandae assumenda consectetur porro architecto ipsum ipsam\"",
+                  "    },",
+                  "    {",
+                  "        \"title\": \"autem hic labore sunt dolores incidunt\",",
+                  "        \"body\": \"enim et ex nulla\\nomnis voluptas quia qui\\nvoluptatem consequatur numquam aliquam sunt\\ntotam recusandae id dignissimos aut sed asperiores deserunt\"",
+                  "    }",
+                  "];",
+                  "",
+                  "// Función para validar la presencia de títulos y cuerpos",
+                  "validations.forEach(function(item) {",
+                  "    var titleFound = jsonData.some(function(post) {",
+                  "        return post.title === item.title;",
+                  "    });",
+                  "",
+                  "    var bodyFound = jsonData.some(function(post) {",
+                  "        return post.body === item.body;",
+                  "    });",
+                  "",
+                  "    pm.test('Validar título: ' + item.title, function() {",
+                  "        pm.expect(titleFound).to.be.true;",
+                  "    });",
+                  "",
+                  "    pm.test('Validar cuerpo: ' + item.body, function() {",
+                  "        pm.expect(bodyFound).to.be.true;",
+                  "    });",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts",
+              "protocol": "https",
+              "host": ["jsonplaceholder", "typicode", "com"],
+              "path": ["posts"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Pruebas API - POST",
+      "item": [
+        {
+          "name": "Segunda Prueba - POST Users",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "// Obtener la respuesta en formato JSON",
+                  "var jsonData = pm.response.json();",
+                  "",
+                  "// Validar que el estado de respuesta es 201",
+                  "pm.test('Estado de respuesta es 201', function () {",
+                  "    pm.response.to.have.status(201);",
+                  "});",
+                  "",
+                  "// Validar que la respuesta es un objeto JSON",
+                  "pm.test('La respuesta es un objeto JSON', function () {",
+                  "    pm.expect(jsonData).to.be.an('object');",
+                  "});",
+                  "",
+                  "// Validar que la respuesta contiene las propiedades 'name', 'job', 'id' y 'createdAt'",
+                  "pm.test('La respuesta contiene las propiedades requeridas', function () {",
+                  "    pm.expect(jsonData).to.have.all.keys('name', 'job', 'id', 'createdAt');",
+                  "});",
+                  "",
+                  "// Validar que las propiedades 'name' y 'job' coinciden con los enviados",
+                  "pm.test('El nombre en la respuesta coincide con el enviado', function () {",
+                  "    const requestBody = JSON.parse(pm.request.body.raw);",
+                  "    pm.expect(jsonData.name).to.eql(requestBody.name);",
+                  "});",
+                  "",
+                  "pm.test('El trabajo en la respuesta coincide con el enviado', function () {",
+                  "    const requestBody = JSON.parse(pm.request.body.raw);",
+                  "    pm.expect(jsonData.job).to.eql(requestBody.job);",
+                  "});",
+                  "",
+                  "// Validar que el ID está presente en la respuesta",
+                  "pm.test('El ID está presente en la respuesta', function () {",
+                  "    pm.expect(jsonData).to.have.property('id');",
+                  "});",
+                  "",
+                  "// Validar que 'createdAt' es una cadena que representa una fecha",
+                  "pm.test('La propiedad createdAt es una cadena que representa una fecha', function () {",
+                  "    pm.expect(jsonData.createdAt).to.be.a('string');",
+                  "    pm.expect(new Date(jsonData.createdAt)).to.be.a('date');",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"{{name}}\",\n    \"job\": \"{{job}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://reqres.in/api/users",
+              "protocol": "https",
+              "host": ["reqres", "in"],
+              "path": ["api", "users"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

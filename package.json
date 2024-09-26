@@ -4,7 +4,7 @@
   "description": "",
   "main": "TestApis.js",
   "scripts": {
-    "test-report": "newman run CapaApis/ColeccionRun.json -d dataRandom.json -r html --reporter-html-export Newman_Report.html"
+    "test-report": "newman run CapaApis/Collecciones_GET_POST.json -d CapaApis/dataRandom.json -r html --reporter-html-export Newman_Report.html"
   },
   "private": true,
   "dependencies": {

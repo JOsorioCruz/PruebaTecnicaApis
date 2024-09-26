@@ -16,7 +16,7 @@ El proyecto está organizado en las siguientes carpetas:
 - **Capa Base de Datos**: Incluye un archivo con las sentencias SQL para las pruebas en la base de datos.
 ````
 ├── CapaApis
-│   ├── ColeccionRun.json
+│   ├── Collecciones_GET_POST.json
 │   ├── dataRandom.json
 ├── CapaBaseDeDatos
 │   ├── CapaBaseDeDatos.txt
@@ -51,7 +51,7 @@ En este caso, se validan los siguientes puntos:
 Para generar el reporte, se debe ejecutar el siguiente script en el archivo `package.json`:
 
 ```json
-"test-report": "newman run CapaApis/ColeccionRun.json -d dataRandom.json -r html --reporter-html-export Newman_Report.html"
+    "test-report": "newman run CapaApis/Collecciones_GET_POST.json -d CapaApis/dataRandom.json -r html --reporter-html-export Newman_Report.html"
 ```
 
 ### Ruta de la Colección de Postman
