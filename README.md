@@ -8,6 +8,10 @@ Este proyecto es una prueba técnica que implementa validaciones utilizando Post
 2. **Instalar Newman**: https://support.postman.com/hc/en-us/articles/115003703325-How-to-install-Newman
 3. **Contar con un IDE de desarrollo**: Para editar y ejecutar los scripts y archivos de configuración.
 
+# Ruta de la prueba en Postman
+
+[Enlace a la colección de Postman](https://elements.getpostman.com/redirect?entityId=32063379-9b79064f-313e-4e32-b76f-1c8ac3436b5c&entityType=collection)
+
 ## Estructura del Proyecto
 
 El proyecto está organizado en las siguientes carpetas:
@@ -19,7 +23,9 @@ El proyecto está organizado en las siguientes carpetas:
 │   ├── Collecciones_GET_POST.json
 │   ├── dataRandom.json
 ├── CapaBaseDeDatos
-│   ├── CapaBaseDeDatos.txt
+│   ├── CapaBaseDeDatos.md
+├── CasoHipotetico:SistemaDeGestionDeBiblioteca
+│   ├── CasosDePrueba.md
 ├── node_modules
 ├── package.json
 ├── package-lock.json
@@ -27,6 +33,15 @@ El proyecto está organizado en las siguientes carpetas:
 ````
 ---
 
+## Carpeta Caso Hipotetico: Sistema De Gestion De Biblioteca
+
+En esta carpeta se encuentra la implementación de casos de prueba para un Sistema de Gestión de Biblioteca. El sistema permite a los usuarios registrarse, buscar libros, realizar reservas y gestionar sus perfiles.
+````
+Nota:
+- Los casos de prueba cubren tanto escenarios positivos como negativos.
+- Se han incluido pruebas para validar restricciones de seguridad y acceso.
+- La cobertura de pruebas abarca las principales funcionalidades del sistema, pero podría expandirse para incluir más casos de borde y pruebas de integración.
+````
 ## Carpeta Capa APIs
 
 En esta carpeta se encuentran los archivos `.json` que contienen los scripts ejecutables de las colecciones de Postman. También incluye datos aleatorios para consumir de manera dinámica, con el objetivo de validar el comportamiento de las APIs.
@@ -54,11 +69,6 @@ Para generar el reporte, se debe ejecutar el siguiente script en el archivo `pac
     "test-report": "newman run CapaApis/Collecciones_GET_POST.json -d CapaApis/dataRandom.json -r html --reporter-html-export Newman_Report.html"
 ```
 
-### Ruta de la Colección de Postman
-
-````
-{Ruta_del_Archivo_Coleccion_Postman}
-````
 
 ## Carpeta Capa Base de Datos
 
