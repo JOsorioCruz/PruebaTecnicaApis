@@ -15,7 +15,7 @@ Este proyecto es una prueba técnica que implementa validaciones utilizando Post
 ## Estructura del Proyecto
 
 El proyecto está organizado en las siguientes carpetas:
-
+- **Carpeta Caso Hipotetico: Sistema De Gestion De Biblioteca:**: Contiene los casos de prueba de acuerdo a las historias de usuario.
 - **Capa APIs**: Contiene los scripts de Postman en formato `.json` y datos aleatorios para las pruebas dinámicas de API.
 - **Capa Base de Datos**: Incluye un archivo con las sentencias SQL para las pruebas en la base de datos.
 ````
