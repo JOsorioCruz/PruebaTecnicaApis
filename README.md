@@ -8,7 +8,7 @@ Este proyecto es una prueba técnica que implementa validaciones utilizando Post
 2. **Instalar Newman**: https://support.postman.com/hc/en-us/articles/115003703325-How-to-install-Newman
 3. **Contar con un IDE de desarrollo**: Para editar y ejecutar los scripts y archivos de configuración.
 
-# Ruta de la prueba en Postman
+# Ruta de la prueba de las Apis en Postman
 
 [Enlace a la colección de Postman](https://elements.getpostman.com/redirect?entityId=32063379-9b79064f-313e-4e32-b76f-1c8ac3436b5c&entityType=collection)
 

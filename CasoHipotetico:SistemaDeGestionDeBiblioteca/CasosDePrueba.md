@@ -209,41 +209,51 @@ Pasos:
 
 ## Trazabilidad de prueba:
 
+Nomeclaturas:
+- `HU:` Historias de Usuario 
+- `CP:` Caso de prueba
+- `CPHU:` Caso de prueba de la Historia de usuario
+- `Numeros:` Identificador de caso de prueba o de la historia
+
+**Ejemplo:** 
+- `HU001:` identificador de la historia usuario numero 1
+- `CPHU1-001:` identificador del caso de prueba 1 de la historia de usuario 1
+
 ````
     HU001 (Registro de usuario):
-        CP001: Registro de usuario exitoso.
-        CP002: Registro de usuario con correo no institucional.
-        CP003: Registro de usuario con contraseña débil.
+        CPHU1-001: Registro de usuario exitoso.
+        CPHU1-002: Registro de usuario con correo no institucional.
+        CPHU1-003: Registro de usuario con contraseña débil.
 
     HU002 (Inicio de sesión):
-        CP004: Inicio de sesión exitoso.
-        CP005: Inicio de sesión fallido.
+        CPHU2-004: Inicio de sesión exitoso.
+        CPHU2-005: Inicio de sesión fallido.
 
     HU003 (Recuperación de contraseña):
-        CP006: Recuperación de contraseña.
+        CPHU003-006: Recuperación de contraseña.
 
     HU004 (Búsqueda de libros):
-        CP007: Búsqueda de libros por título.
-        CP008: Búsqueda de libros por autor.
-        CP009: Búsqueda de libros por categoría.
-        CP017: Búsqueda de libros con filtros múltiples.
+        CPHU004-007: Búsqueda de libros por título.
+        CPHU004-008: Búsqueda de libros por autor.
+        CPHU004-009: Búsqueda de libros por categoría.
+        CPHU004-017: Búsqueda de libros con filtros múltiples.
 
     HU005 (Reserva de libros):
-        CP011: Reserva de libro exitosa.
-        CP010: Intento de reserva de libros fuera de horario.
-        CP016: Cancelación de reserva.
-        CP017: Búsqueda de libros con filtros múltiples.
-        CP018: Renovación de préstamo.
+        CPHU005-011: Reserva de libro exitosa.
+        CPHU005-010: Intento de reserva de libros fuera de horario.
+        CPHU005-016: Cancelación de reserva.
+        CPHU005-017: Búsqueda de libros con filtros múltiples.
+        CPHU005-018: Renovación de préstamo.
 
     HU006 (Administración del perfil de usuario):
-        CP012: Visualización y edición del perfil de usuario.
-        CP014: Cambio de contraseña desde el perfil de usuario.
+        CPHU006-012: Visualización y edición del perfil de usuario.
+        CPHU006-014: Cambio de contraseña desde el perfil de usuario.
 
     HU007 (Visualización del historial de préstamos):
-        CP013: Visualización del historial de préstamos.
+        CPHU007-013: Visualización del historial de préstamos.
 
     HU008 (Renovación de préstamos):
-        CP018: Renovación de préstamo.
+        CPHU008-018: Renovación de préstamo.
 
     Restricciones adicionales:
         CP010: Horario de reserva de libros.
