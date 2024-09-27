@@ -27,6 +27,8 @@ El proyecto está organizado en las siguientes carpetas:
 ├── CasoHipotetico:SistemaDeGestionDeBiblioteca
 │   ├── CasosDePrueba.md
 ├── node_modules
+├── .gitignore
+├── MTTD.md
 ├── package.json
 ├── package-lock.json
 ├── README.md
