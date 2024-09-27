@@ -72,7 +72,7 @@ Para generar el reporte, se debe ejecutar el siguiente script en el archivo `pac
 
 ## Carpeta Capa Base de Datos
 
-En esta carpeta se encuentra el archivo CapaBaseDeDatos.txt, que contiene las sentencias SQL necesarias para probar las funcionalidades relacionadas con la gestión de productos en una tienda en línea. Estas sentencias incluyen:
+En esta carpeta se encuentra el archivo CapaBaseDeDatos.md, que contiene las sentencias SQL necesarias para probar las funcionalidades relacionadas con la gestión de productos en una tienda en línea. Estas sentencias incluyen:
 ##### Funcionalidades Probadas
 
     - Inserción de productos: Se validó que los productos puedan ser añadidos correctamente a la base de datos.
